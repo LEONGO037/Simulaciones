@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Home from './pages/Home'
-import SimulacionDepositoPlazoFijo from './pages/SimulacionDepositoPlazoFijo'
-import SimulacionGranjero from './pages/SimulacionGranjero'
-import SimulacionDados from './pages/SimulacionDados'
-import SimulacionTiendaAzucar from './pages/SimulacionTiendaAzucar'
-import SimulacionClientesTienda from './pages/SimulacionClientesTienda'
+import Navbar from './assets/components/Navbar.jsx'
+import Sidebar from './assets/components/Sidebar.jsx'
+import Home from './assets/pages/Home.jsx'
+import SimulacionDepositoPlazoFijo from './assets/pages/SimulacionDepositoPlazoFijo.jsx'
+import SimulacionGranjero from './assets/pages/SimulacionGranjero.jsx'
+import SimulacionDados from './assets/pages/SimulacionDados.jsx'
+import SimulacionTiendaAzucar from './assets/pages/SimulacionTiendaAzucar.jsx'
+import SimulacionClientesTienda from './assets/pages/SimulacionClientesTienda.jsx'
 import './App.css'
 
 function App() {
@@ -19,11 +19,11 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/simulacion-deposito-plazo-fijo" element={<SimulacionDepositoPlazoFijo />} />
-              <Route path="/simulacion-granjero" element={<SimulacionGranjero />} />
-              <Route path="/simulacion-dados" element={<SimulacionDados />} />
-              <Route path="/simulacion-tienda-azucar" element={<SimulacionTiendaAzucar />} />
-              <Route path="/simulacion-clientes-tienda" element={<SimulacionClientesTienda />} />
+              <Route path="/deposito-plazo-fijo" element={<SimulacionDepositoPlazoFijo />} />
+              <Route path="/granjero" element={<SimulacionGranjero />} />
+              <Route path="/lanzamiento-dados" element={<SimulacionDados />} />
+              <Route path="/tienda-azucar" element={<SimulacionTiendaAzucar />} />
+              <Route path="/clientes-tienda" element={<SimulacionClientesTienda />} />
             </Routes>
           </div>
         </div>
