@@ -6,7 +6,7 @@ import SimulacionDepositoPlazoFijo from './assets/pages/SimulacionDepositoPlazoF
 import SimulacionGranjero from './assets/pages/SimulacionGranjero.jsx'
 import SimulacionDados from './assets/pages/SimulacionDados.jsx'
 import SimulacionTiendaAzucar from './assets/pages/SimulacionTiendaAzucar.jsx'
-import SimulacionClientesTienda from './assets/pages/SimulacionClientesTienda.jsx'
+import SimulacionClientesTienda from './assets/pages/SimulacionTienda.jsx'
 import './App.css'
 
 function App() {
