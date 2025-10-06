@@ -1,0 +1,521 @@
+.simulacion-dados-container {
+  background: rgba(15, 15, 35, 0.8);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 8px 25px rgba(126, 34, 206, 0.2);
+  border: 1px solid #3730a3;
+}
+
+.simulacion-dados-container h1 {
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.explicacion-juego {
+  background: rgba(30, 27, 75, 0.6);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid #4c1d95;
+  margin-bottom: 2rem;
+}
+
+.explicacion-juego h3 {
+  color: #93c5fd;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.reglas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.regla-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  background: rgba(49, 46, 129, 0.4);
+  border-radius: 8px;
+  border: 1px solid #3730a3;
+}
+
+.regla-icon {
+  font-size: 1.2rem;
+}
+
+.regla-texto {
+  color: #bfdbfe;
+  font-size: 0.95rem;
+}
+
+.regla-texto strong {
+  color: #93c5fd;
+}
+
+.descripcion-juego {
+  color: #bfdbfe;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #3730a3;
+}
+
+.controles-simulacion {
+  background: rgba(30, 27, 75, 0.6);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #4c1d95;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  color: #93c5fd;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.75rem;
+  border: 1px solid #3730a3;
+  border-radius: 8px;
+  background: rgba(15, 15, 35, 0.8);
+  color: #bfdbfe;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+.input-hint {
+  display: block;
+  color: #93c5fd;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  opacity: 0.7;
+}
+
+.botones-accion {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-simular, .btn-limpiar {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-simular {
+  background: linear-gradient(135deg, #3b82f6 0%, #7e22ce 100%);
+  color: white;
+}
+
+.btn-simular:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+}
+
+.btn-limpiar {
+  background: rgba(239, 68, 68, 0.8);
+  color: white;
+}
+
+.btn-limpiar:hover {
+  background: rgba(239, 68, 68, 1);
+  transform: translateY(-2px);
+}
+
+.resultados-simulacion {
+  background: rgba(30, 27, 75, 0.6);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #4c1d95;
+}
+
+.resultados-simulacion h2 {
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.estadisticas-principales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.estadistica-item {
+  background: rgba(49, 46, 129, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #3730a3;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.estadistica-item:hover {
+  transform: translateY(-2px);
+  border-color: #60a5fa;
+}
+
+.estadistica-item.favorable {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.estadistica-item.desfavorable {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.estadistica-label {
+  display: block;
+  color: #93c5fd;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.estadistica-valor {
+  display: block;
+  color: #bfdbfe;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.ganancia {
+  color: #10b981 !important;
+}
+
+.perdida {
+  color: #ef4444 !important;
+}
+
+.tabla-resultados {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.tabla-resultados h3 {
+  color: #93c5fd;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tabla-resultados table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 15, 35, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabla-resultados th {
+  background: linear-gradient(135deg, #3b82f6 0%, #7e22ce 100%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tabla-resultados td {
+  padding: 1rem;
+  border-bottom: 1px solid #3730a3;
+  color: #bfdbfe;
+  text-align: center;
+}
+
+.fila-gana-jugador {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.fila-gana-jugador:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.fila-gana-casa {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.fila-gana-casa:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.dado {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.suma {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #93c5fd;
+}
+
+.gana {
+  color: #ef4444; /* rojo */
+  font-weight: bold;
+  background: rgba(239, 68, 68, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #ef4444;
+}
+
+.pierde {
+  color: #10b981; /* verde */
+  font-weight: bold;
+  background: rgba(16, 185, 129, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #10b981;
+}
+
+.ganancia-casa.positiva {
+  color: #10b981;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.ganancia-casa.negativa {
+  color: #ef4444;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.analisis-conclusion {
+  background: rgba(49, 46, 129, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #3730a3;
+}
+
+.analisis-conclusion h3 {
+  color: #93c5fd;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.conclusion-content p {
+  color: #bfdbfe;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.conclusion-final {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.conclusion-final.favorable {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #10b981;
+}
+
+.conclusion-final.desfavorable {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.inputs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.resumen-configuracion {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(49, 46, 129, 0.3);
+  border-radius: 8px;
+  border: 1px solid #3730a3;
+}
+
+.config-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.config-label {
+  color: #93c5fd;
+  font-size: 0.9rem;
+}
+
+.config-valor {
+  color: #bfdbfe;
+  font-weight: bold;
+}
+
+/* Estilos para diferenciar jugadores */
+.jugador {
+  font-weight: bold;
+  position: relative;
+  border-left: 3px solid transparent;
+}
+
+.fila-gana-jugador:hover,
+.fila-gana-casa:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* Colores específicos para cada jugador (hasta 10 jugadores) */
+.jugador-1 .jugador { border-left-color: #60a5fa; }
+.jugador-2 .jugador { border-left-color: #a855f7; }
+.jugador-3 .jugador { border-left-color: #10b981; }
+.jugador-4 .jugador { border-left-color: #f59e0b; }
+.jugador-5 .jugador { border-left-color: #ef4444; }
+.jugador-6 .jugador { border-left-color: #0ea5e9; }
+.jugador-7 .jugador { border-left-color: #f97316; }
+.jugador-8 .jugador { border-left-color: #8b5cf6; }
+.jugador-9 .jugador { border-left-color: #14b8a6; }
+.jugador-10 .jugador { border-left-color: #ec4899; }
+
+/* Indicador de color del jugador */
+.indicator-jugador {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid;
+}
+
+.jugador-1 .indicator-jugador { background: #60a5fa; border-color: #3b82f6; }
+.jugador-2 .indicator-jugador { background: #a855f7; border-color: #7e22ce; }
+.jugador-3 .indicator-jugador { background: #10b981; border-color: #047857; }
+.jugador-4 .indicator-jugador { background: #f59e0b; border-color: #d97706; }
+.jugador-5 .indicator-jugador { background: #ef4444; border-color: #dc2626; }
+.jugador-6 .indicator-jugador { background: #0ea5e9; border-color: #0284c7; }
+.jugador-7 .indicator-jugador { background: #f97316; border-color: #ea580c; }
+.jugador-8 .indicator-jugador { background: #8b5cf6; border-color: #7c3aed; }
+.jugador-9 .indicator-jugador { background: #14b8a6; border-color: #0d9488; }
+.jugador-10 .indicator-jugador { background: #ec4899; border-color: #db2777; }
+
+/* Mejorar la legibilidad de las filas */
+.tabla-resultados tr {
+  transition: all 0.2s ease;
+}
+
+.tabla-resultados tr:nth-child(even) {
+  background: rgba(30, 27, 75, 0.3);
+}
+
+/* Estilos para el header de la tabla */
+.tabla-resultados thead tr {
+  background: linear-gradient(135deg, #3b82f6 0%, #7e22ce 100%) !important;
+}
+
+.tabla-resultados th {
+  position: relative;
+  overflow: hidden;
+}
+
+.tabla-resultados th::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .simulacion-dados-container {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .estadisticas-principales {
+    grid-template-columns: 1fr;
+  }
+  
+  .botones-accion {
+    flex-direction: column;
+  }
+  
+  .input-group input {
+    max-width: 100%;
+  }
+  
+  .tabla-resultados {
+    font-size: 0.9rem;
+  }
+  
+  .tabla-resultados th,
+  .tabla-resultados td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .regla-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .inputs-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .resumen-configuracion {
+    grid-template-columns: 1fr;
+  }
+  
+  .config-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3rem;
+  }
+  
+  .tabla-resultados {
+    font-size: 0.8rem;
+  }
+  
+  .tabla-resultados th,
+  .tabla-resultados td {
+    padding: 0.5rem 0.3rem;
+  }
+}

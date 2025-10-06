@@ -111,7 +111,7 @@ const SimulacionDepositoPlazoFijo = () => {
             type="number"
             id="periodos"
             value={periodos}
-            onChange={(e) => setPeriodos(parseInt(e.target.value) || 1)}
+            onChange={(e) => setPeriodos(parseInt(e.target.value))}
             min="1"
             max="1000000"
           />
