@@ -472,9 +472,17 @@ const SimulacionTienda = () => {
                         <td className="detalle">
                           <div className="detalle-compras">
                             {resultado.clientesDetalle.map((cliente, idx) => (
-                              <span key={idx} className="compra-individual">
-                                Cliente {cliente.cliente}: {cliente.articulosComprados} art.
-                              </span>
+                              <div key={idx} className="compra-individual">
+                                <span className="cliente-info">Cliente {cliente.cliente}</span>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                  <span className="articulos-info">
+                                    {cliente.articulosComprados} artículo{cliente.articulosComprados !== 1 ? 's' : ''}
+                                  </span>
+                                  <span className="ingreso-info">
+                                    {formatearMoneda(cliente.ingresoCliente)}
+                                  </span>
+                                </div>
+                              </div>
                             ))}
                           </div>
                         </td>
