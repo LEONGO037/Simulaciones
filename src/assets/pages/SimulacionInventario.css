@@ -1,4 +1,4 @@
-.simulacion-container {
+.simulacion-inventario-container {
   background: rgba(15, 15, 35, 0.8);
   border-radius: 20px;
   padding: 2rem;
@@ -7,7 +7,7 @@
   border: 1px solid #3730a3;
 }
 
-.simulacion-container h1 {
+.simulacion-inventario-container h1 {
   background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15,23 +15,9 @@
   margin-bottom: 2rem;
   font-size: 2.2rem;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
-.logo-titulo {
-  font-size: 2.5rem;
-  animation: flotar 3s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
-
-.explicacion {
+.explicacion-simulacion {
   background: rgba(30, 27, 75, 0.6);
   padding: 1.5rem;
   border-radius: 15px;
@@ -39,71 +25,32 @@
   margin-bottom: 2rem;
 }
 
-.explicacion h3 {
+.explicacion-simulacion h3 {
   color: #93c5fd;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
-.tasas-interes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+.descripcion-texto p {
+  color: #bfdbfe;
+  line-height: 1.6;
   margin-bottom: 1rem;
-}
-
-.tasa-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  background: rgba(49, 46, 129, 0.4);
-  border-radius: 10px;
-  border: 1px solid #3730a3;
-  transition: all 0.3s ease;
-  gap: 0.5rem;
-}
-
-.tasa-item:hover {
-  transform: translateY(-2px);
-  border-color: #60a5fa;
-  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
-}
-
-.rango-capital {
-  color: #bfdbfe;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.valor-tasa {
-  background: linear-gradient(135deg, #3b82f6 0%, #7e22ce 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  border: 1px solid #3730a3;
-}
-
-.descripcion {
-  color: #bfdbfe;
-  line-height: 1.5;
   font-size: 0.95rem;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #3730a3;
 }
 
-.controles-simulacion {
+.parametros-simulacion {
   background: rgba(30, 27, 75, 0.6);
   padding: 2rem;
   border-radius: 15px;
   border: 1px solid #4c1d95;
   margin-bottom: 2rem;
+}
+
+.parametros-simulacion h3 {
+  color: #93c5fd;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .parametros-grid {
@@ -128,20 +75,18 @@
 }
 
 .input-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .input-group label {
   display: block;
-  color: #93c5fd;
+  color: #bfdbfe;
   margin-bottom: 0.5rem;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
-.input-group input, .input-group select {
+.input-group input {
   width: 100%;
-  max-width: 300px;
   padding: 0.75rem;
   border: 1px solid #3730a3;
   border-radius: 8px;
@@ -150,18 +95,10 @@
   font-size: 1rem;
 }
 
-.input-group input:focus, .input-group select:focus {
+.input-group input:focus {
   outline: none;
   border-color: #60a5fa;
   box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
-}
-
-.input-hint {
-  display: block;
-  color: #93c5fd;
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
-  opacity: 0.7;
 }
 
 .resumen-configuracion {
@@ -214,9 +151,14 @@
   color: white;
 }
 
-.btn-simular:hover {
+.btn-simular:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+}
+
+.btn-simular:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .btn-limpiar {
@@ -242,12 +184,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.resultados-simulacion h3 {
-  color: #93c5fd;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -292,20 +228,62 @@
   font-weight: bold;
 }
 
-.estadistica-subtexto {
-  display: block;
-  color: #93c5fd;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+.desglose-costos {
+  background: rgba(49, 46, 129, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #3730a3;
+  margin-bottom: 2rem;
 }
 
-.interes-ganado {
-  color: #10b981 !important;
+.desglose-costos h3 {
+  color: #93c5fd;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.costos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.costo-item {
+  background: rgba(30, 27, 75, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #3730a3;
+  text-align: center;
+}
+
+.costo-item.total {
+  border-color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.costo-label {
+  display: block;
+  color: #93c5fd;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.costo-valor {
+  display: block;
+  color: #bfdbfe;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .tabla-resultados {
   overflow-x: auto;
   margin-bottom: 2rem;
+}
+
+.tabla-resultados h3 {
+  color: #93c5fd;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .tabla-resultados table {
@@ -320,37 +298,21 @@
   background: linear-gradient(135deg, #3b82f6 0%, #7e22ce 100%);
   color: white;
   padding: 1rem;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .tabla-resultados td {
-  padding: 1rem;
+  padding: 0.75rem;
   border-bottom: 1px solid #3730a3;
   color: #bfdbfe;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .tabla-resultados tr:hover {
   background: rgba(96, 165, 250, 0.1);
-}
-
-.tabla-resultados .periodo {
-  color: #93c5fd;
-  font-weight: bold;
-}
-
-.tabla-resultados .capital,
-.tabla-resultados .interes,
-.tabla-resultados .capital-final {
-  font-family: 'Courier New', monospace;
-}
-
-.fila-final-resaltada {
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.3) 0%, rgba(168, 85, 247, 0.3) 100%) !important;
-  color: #ffffff !important;
-  font-weight: bold !important;
-  border-top: 2px solid #60a5fa !important;
-  border-bottom: 2px solid #a855f7 !important;
 }
 
 .mensaje-limitado {
@@ -392,22 +354,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .simulacion-container {
+  .simulacion-inventario-container {
     padding: 1rem;
     margin: 0.5rem;
   }
-
-  .simulacion-container h1 {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
   
-  .tasa-item {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
   .parametros-grid {
     grid-template-columns: 1fr;
   }
@@ -430,20 +381,16 @@
     grid-template-columns: 1fr;
   }
   
-  .input-group input, .input-group select {
-    max-width: 100%;
+  .costos-grid {
+    grid-template-columns: 1fr;
   }
   
   .tabla-resultados {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   
   .tabla-resultados th,
   .tabla-resultados td {
-    padding: 0.75rem 0.5rem;
-  }
-
-  .fila-final-resaltada {
-    background: linear-gradient(135deg, rgba(96, 165, 250, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%) !important;
+    padding: 0.5rem 0.3rem;
   }
 }

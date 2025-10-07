@@ -68,43 +68,39 @@ const Home = () => {
         </section>
 
       <section className="flowchart-section">
-        <h2>Proceso de Simulación</h2>
+        <h2>Proceso de Construcción de Modelos</h2>
         <div className="flowchart">
-          <div className="flow-step">
+            <div className="flow-step">
             <div className="step-number">1</div>
-            <h4>Definir Modelo</h4>
-            <p>Establecer parámetros y variables</p>
-          </div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-step">
+            <h4>Diccionario de Variables</h4>
+            <p>Especificación y explicación de los componentes del modelo</p>
+            </div>
+            <div className="flow-arrow">→</div>
+            <div className="flow-step">
             <div className="step-number">2</div>
-            <h4>Configurar</h4>
-            <p>Ajustar condiciones iniciales</p>
-          </div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-step">
+            <h4>Clasificación de Variables</h4>
+            <p>Identificación de variables Exógenas, de Estado y Endógenas</p>
+            </div>
+            <div className="flow-arrow">→</div>
+            <div className="flow-step">
             <div className="step-number">3</div>
-            <h4>Ejecutar</h4>
-            <p>Correr la simulación</p>
-          </div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-step">
+            <h4>Relaciones Funcionales</h4>
+            <p>Definición de ecuaciones y características de operación</p>
+            </div>
+            <div className="flow-arrow">→</div>
+            <div className="flow-step">
             <div className="step-number">4</div>
-            <h4>Analizar</h4>
-            <p>Interpretar resultados</p>
-          </div>
+            <h4>Diagrama de Flujo</h4>
+            <p>Representación completa del modelo</p>
+            </div>
         </div>
-      </section>
+        </section>
 
       <section className="stats-section">
         <div className="stats-container">
           <div className="stat-item">
-            <div className="stat-number">5</div>
+            <div className="stat-number">6</div>
             <div className="stat-label">Simulaciones</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">3</div>
-            <div className="stat-label">Categorías</div>
           </div>
           <div className="stat-item">
             <div className="stat-number">100%</div>

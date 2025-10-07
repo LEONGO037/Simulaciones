@@ -10,18 +10,12 @@ const SimulacionDepositoPlazoFijo = () => {
   const [mostrarResultados, setMostrarResultados] = useState(false)
   const [interes, setInteres] = useState(1)
 
-  const calcularTasaInteres = (k) => {
-    if (k > 100 && k <= 10000) return 0.035
-    if (k > 10000 && k <= 100000) return 0.037
-    return 0.04
-  }
-
   const simularDeposito = () => {
     setCapitalInicial(capital)
     const nuevosResultados = []
     let capitalActual = capital
     
-    const tasaAnual = calcularTasaInteres(capitalActual)
+    const tasaAnual = 0.035
     const tasaMensual = tasaAnual / 12 // Convertir tasa anual a mensual
     setInteres(tasaAnual * 100)
 
@@ -90,19 +84,11 @@ const SimulacionDepositoPlazoFijo = () => {
       </h1>
       
       <div className="explicacion">
-        <h3>🏦 Tasas de Interés Según Capital:</h3>
+        <h3>🏦 Tasas de Interés:</h3>
         <div className="tasas-interes">
           <div className="tasa-item">
-            <span className="rango-capital">Capital entre 100 Bs y 10,000 Bs</span>
+            <span className="rango-capital">Cualquier cantidad de capital</span>
             <span className="valor-tasa">3.5% de interés</span>
-          </div>
-          <div className="tasa-item">
-            <span className="rango-capital">Capital entre 10,001 Bs y 100,000 Bs</span>
-            <span className="valor-tasa">3.7% de interés</span>
-          </div>
-          <div className="tasa-item">
-            <span className="rango-capital">Capital mayor a 100,000 Bs</span>
-            <span className="valor-tasa">4.0% de interés</span>
           </div>
         </div>
         <p className="descripcion">
@@ -172,7 +158,7 @@ const SimulacionDepositoPlazoFijo = () => {
           </div>
           <div className="config-item">
             <span className="config-label">Tasa aplicable:</span>
-            <span className="config-valor">{(calcularTasaInteres(capital) * 100).toFixed(2)}%</span>
+            <span className="config-valor">3.5%</span>
           </div>
           <div className="config-item">
             <span className="config-label">Total de meses a simular:</span>
